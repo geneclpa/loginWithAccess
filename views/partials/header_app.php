@@ -8,9 +8,9 @@
 
     <div class="w50 tar mr20">
     
-        <a class="links nounder cursor-pointer cWhiteColorPrimary">Inicio</a>
+        <a href="./login_content" class="links nounder cWhiteColorPrimary">Inicio</a>
         <span class="pr20 pl20 cWhiteColorPrimary">|</span>
-        <a class="links nounder cursor-pointer cWhiteColorPrimary">Registro</a>
+        <a href="./register_content" class="links nounder cWhiteColorPrimary">Registro</a>
     
     </div>
 

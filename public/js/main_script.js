@@ -21,11 +21,13 @@ d.addEventListener('click', e => {
 
     if(e.target.matches('.links')){
 
+        e.preventDefault();
+
         if(e.target.textContent === 'Inicio'){
 
             /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
             get_html({
-                url: './login_content',
+                url: e.target.href,
                 success: (html) => $html.innerHTML = html,
                 error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
             });
@@ -35,10 +37,10 @@ d.addEventListener('click', e => {
         if(e.target.textContent === 'Registro'){
 
            /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-           get_html({
-                url: './register_content',
-                success: (html) => $html.innerHTML = html,
-                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
+            get_html({
+               url: e.target.href,
+               success: (html) => $html.innerHTML = html,
+               error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
             });
 
         }
