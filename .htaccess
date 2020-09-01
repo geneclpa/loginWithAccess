@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+#  Al subirlo al servidor se debe colocar solo / (el directorio raíz)
+RewriteBase /loginwithaccess
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?page=$1 [L]
