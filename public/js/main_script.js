@@ -1,6 +1,52 @@
 /*  Creamos con el document para mayor facilidad al utilizarlo  */
 const d = document;
 
+/*  Eventos al dar click en la página web  */
+d.addEventListener('click', e => {
+
+    /*  Se selecciona el contenedor del contenido principal  */
+    const $html = d.querySelector('.main__section');
+
+    /*  Al hacer click en el logo se va al inicio  */
+    if(e.target.matches('.logo')){
+
+       /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
+        get_html({
+            url: './index_content',
+            success: (html) => $html.innerHTML = html,
+            error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
+        });
+
+    }
+
+    if(e.target.matches('.links')){
+
+        if(e.target.textContent === 'Inicio'){
+
+            /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
+            get_html({
+                url: './login_content',
+                success: (html) => $html.innerHTML = html,
+                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
+            });
+
+        }
+
+        if(e.target.textContent === 'Registro'){
+
+           /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
+           get_html({
+                url: './register_content',
+                success: (html) => $html.innerHTML = html,
+                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
+            });
+
+        }
+
+    }
+    
+});
+
 /*  Eventos al cargar la página web  */
 d.addEventListener('DOMContentLoaded', e => {
 

@@ -2,15 +2,15 @@
 
     <div class="w50 tac cYellowColorPrimary">
     
-        <h1>LoginWhitAccess</h1>
+        <h1 class="logo cursor-pointer">LoginWhitAccess</h1>
     
     </div>
 
     <div class="w50 tar mr20">
     
-        <a href="./login" class="links nounder cWhiteColorPrimary">Inicio</a>
+        <a class="links nounder cursor-pointer cWhiteColorPrimary">Inicio</a>
         <span class="pr20 pl20 cWhiteColorPrimary">|</span>
-        <a href="./register" class="links nounder cWhiteColorPrimary">Registro</a>
+        <a class="links nounder cursor-pointer cWhiteColorPrimary">Registro</a>
     
     </div>
 
