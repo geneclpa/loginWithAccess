@@ -4,9 +4,10 @@ const d = document;
 /*  Eventos al cargar la página web  */
 d.addEventListener('DOMContentLoaded', e => {
 
+    /*  Se selecciona el contenedor del contenido principal  */
     const $html = d.querySelector('.main__section');
 
-    /*  Invocación de la función que procesa peticiones AJAX  */
+    /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
     get_html({
         url: './index_content',
         success: (html) => $html.innerHTML = html,
