@@ -40,6 +40,13 @@
         <div class="main__container">
 
             <header class="main__header">
+
+                <?php
+
+                    /*  Se agrega el header principal de la página  */
+                    include_once VIEWS_DIR . 'partials/header_app.php';
+
+                ?>
             
             </header>
 
