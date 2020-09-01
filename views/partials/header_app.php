@@ -8,7 +8,7 @@
 
     <div class="w50 tar mr20">
     
-        <a href="./login_content" class="links nounder cWhiteColorPrimary">Inicio</a>
+        <a href="./login_content" class="links nounder cWhiteColorPrimary">Login</a>
         <span class="pr20 pl20 cWhiteColorPrimary">|</span>
         <a href="./register_content" class="links nounder cWhiteColorPrimary">Registro</a>
     

@@ -23,7 +23,7 @@ d.addEventListener('click', e => {
 
         e.preventDefault();
 
-        if(e.target.textContent === 'Inicio'){
+        if(e.target.textContent === 'Login'){
 
             /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
             get_html({
