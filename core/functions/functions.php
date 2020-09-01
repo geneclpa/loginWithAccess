@@ -7,7 +7,7 @@
 
         if($server_conexion === 'localhost'){
 
-            $baseURL = 'http://localhost/loginwithaccess';
+            $baseURL = 'http://localhost/loginwithaccess/';
 
         }else{
 
