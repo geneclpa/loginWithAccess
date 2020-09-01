@@ -23,6 +23,17 @@ d.addEventListener('click', e => {
 
         e.preventDefault();
 
+        if(e.target.textContent === 'Home'){
+
+            /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
+            get_html({
+                url: e.target.href,
+                success: (html) => $html.innerHTML = html,
+                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
+            });
+
+        }
+
         if(e.target.textContent === 'Login'){
 
             /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */

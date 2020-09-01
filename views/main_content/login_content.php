@@ -8,7 +8,7 @@
 
     <div class="login__form">
 
-        <form action="" class="w40" autocomplete="off">
+        <form action="" name="login-form" method="POST" class="w40" autocomplete="off">
 
             <input class="pa10 ma10" type="text" name="user" id="user" placeholder="Usuario" required />
 

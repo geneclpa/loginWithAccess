@@ -1,18 +1,24 @@
-.login__page{
+/*  Hoja de estilos personalizada  */
+
+.login__page, .register__page{
     margin-left: auto;
     margin-right: auto;
 }
 
-.login__form{
+.login__form, .register__form{
     display: flex;
     justify-content: center;
 }
 
-.login__form form{
+.login__form form, .register__form form{
     display: flex;
     flex-direction: column;
 }
 
-.login__form form [type=submit]:hover{
+.login__form form [type="submit"], .register__form form [type=submit]{
+    border-radius: var(--tam_5px);
+}
+
+.login__form form [type=submit]:hover, .register__form form [type=submit]:hover{
     background-color: var(--orangeColorPrimary);
 }
