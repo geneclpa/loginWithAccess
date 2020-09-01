@@ -1,0 +1,361 @@
+@charset "utf-8";
+/* CSS Document*/
+
+/*---------------Zona de declaración de variables---------------*/
+:root {
+  /*Definición de las letras del proyecto*/
+  --letter_title: Arial;
+  --letter_text: sans-serif;
+
+  /*Definición de colores del proyecto */
+    --whiteColorPrimary: #ffffff;
+    --redColorPrimary: #DF013A;
+    --orangeColorPrimary: #FF8000;
+    --greenColorPrimary: #0b530b;
+    --blackColorPrimary: #000000;
+    --blackColorSecundary: #444444;
+    --grayColorPrimary: #808080;
+    --darkGrayColorSegundary: #222;
+    --yellowColorPrimary: #f9fb9d;
+
+  /*Definición de los tamaños de los elementos*/
+  /*  Tamaños en porcentajes  */
+    --tam_10p: 10%;
+    --tam_20p: 20%;
+    --tam_30p: 30%;
+    --tam_40p: 40%;
+    --tam_50p: 50%;
+    --tam_60p: 60%;
+    --tam_70p: 70%;
+    --tam_80p: 80%;
+    --tam_90p: 90%;
+    --tam_100p: 100%;
+
+    /*  Tamaños en pixeles  */
+    --tam_5px: 5px;
+    --tam_10px: 10px;
+    --tam_20px: 20px;
+    --tam_30px: 30px;
+    --tam_40px: 40px;
+    --tam_50px: 50px;
+    --tam_60px: 60px;
+    --tam_70px: 70px;
+    --tam_80px: 80px;
+    --tam_90px: 90px;
+    --tam_100px: 100px;
+    --tam_120px: 120px;
+    --tam_200px: 200px;
+    --tam_300px: 300px;
+    --tam_500px: 500px;
+}
+
+/*------------------------Zona de estilos de etiquetas generales------------------------*/
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  min-width: 380px;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+/*  Imágenes responsive  */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*  Anulamos la posibilidad de modificar el tamaño de los textarea en todos los formularios  */
+textarea{ resize: none; }
+
+                    /*  Estilos utilitarios  */
+/*  Ancho  */
+.w10{ width: var(--tam_10p); }
+
+.w20{ width: var(--tam_20p); }
+
+.w30{ width: var(--tam_30p); }
+
+.w40{ width: var(--tam_40p); }
+
+.w50{ width: var(--tam_50p); }
+
+.w60{ width: var(--tam_60p); }
+
+.w70{ width: var(--tam_70p); }
+
+.w80{ width: var(--tam_80p); }
+
+.w90{ width: var(--tam_90p); }
+
+.w100{ width: var(--tam_100p); }
+
+/*  Altos  */
+.h20{ height: var(--tam_20px); }
+
+.h50{ height: var(--tam_50px); }
+
+.h100{ height: var(--tam_100px); }
+
+.h200{ height: var(--tam_200px); }
+
+.h300{ height: var(--tam_300px); }
+
+/*  Bordes  */
+.noBorder { border: 0 }
+
+.border_1_black{ border: 1px solid var(--blackColorPrimary); }
+
+.border_1_gray{ border: 1px solid var(--grayColorPrimary); }
+
+/*  Alineación  */
+.taj{ text-align: justify; }
+
+.tac{ text-align: center; }
+
+.tar{ text-align: right; }
+
+.tal{ text-align: left; }
+
+/*  Márgenes  */
+/*  5px  */
+.mt5{ margin-top: var(--tam_5px); }
+
+.mr5{ margin-right: var(--tam_5px); }
+
+.mb5{ margin-bottom: var(--tam_5px); }
+
+.ml5{ margin-left: var(--tam_5px); }
+
+.ma5{ margin-left: var(--tam_5px); }
+
+/*  10px  */
+.mt10{ margin-top: var(--tam_10px); }
+
+.mr10{ margin-right: var(--tam_10px); }
+
+.mb10{ margin-bottom: var(--tam_10px); }
+
+.ml10{ margin-left: var(--tam_10px); }
+
+.ma10{ margin: var(--tam_10px); }
+
+/*  20px  */
+.mt20{ margin-top: var(--tam_20px); }
+
+.mr20{ margin-right: var(--tam_20px); }
+
+.mb20{ margin-bottom: var(--tam_20px); }
+
+.ml20{ margin-left: var(--tam_20px); }
+
+.ma20{ margin: var(--tam_20px); }
+
+/*  Para centrado  */
+.mla{ margin-left: auto; }
+
+.mra{ margin-right: auto; }
+
+/*  Margenes a 0  */
+.mt0{ margin-top: 0; }
+
+.mr0{ margin-right: 0; }
+
+.mb0{ margin-bottom: 0; }
+
+.ml0{ margin-left: 0; }
+
+.ma0{ margin: 0 }
+
+/*  Paddings  */
+/*  5px  */
+.pt5{ padding-top: var(--tam_5px); }
+
+.pr5{ padding-right: var(--tam_5px); }
+
+.pb5{ padding-bottom: var(--tam_5px); }
+
+.pl5{ padding-left: var(--tam_5px); }
+
+.pa5{ padding: var(--tam_5px); }
+
+/*  10px  */
+.pt10{ padding-top: var(--tam_10px); }
+
+.pr10{ padding-right: var(--tam_10px); }
+
+.pb10{ padding-bottom: var(--tam_10px); }
+
+.pl10{ padding-left: var(--tam_10px); }
+
+.pa10{ padding: var(--tam_10px); }
+
+/*  20px  */
+.pt20{ padding-top: var(--tam_20px); }
+
+.pr20{ padding-right: var(--tam_20px); }
+
+.pb20{ padding-bottom: var(--tam_20px); }
+
+.pl20{ padding-left: var(--tam_20px); }
+
+.pa20{ padding: var(--tam_20px); }
+
+/*  Tamaños de letras  */
+.fs-6{ font-size: .6rem;}
+
+.fs-7{ font-size: .7rem; }
+
+.fs-8{ font-size: .8rem; }
+
+.fs-9{ font-size: .9rem; }
+
+.fs-11{ font-size: 1.1rem; }
+
+.fs-12{ font-size: 1.2rem; }
+
+.fs-13{ font-size: 1.3rem; }
+
+.fs-14{ font-size: 1.4rem; }
+
+.fs-15{ font-size: 1.5rem; }
+
+/*  Colores de fondo  */
+.bgWhiteColorPrimary{ background-color: var(--whiteColorPrimary); }
+
+.bgBlackColorPrimary{ background-color: var(--blackColorPrimary); }
+
+.bgBlackColorSecundary{ background-color: var(--blackColorSecundary); }
+
+.bgRedColorPrimary{ background-color: var(--redColorPrimary); }
+
+.bgOrangeColorPrimary{ background-color: var(--orangeColorPrimary); }
+
+.bgGrayColorPrimary{ background-color: var(--grayColorPrimary); }
+
+.bgDarkGrayColorSecundary{ background-color: var(--darkGrayColorSegundary); }
+
+.bgGreenColorPrimary{ background-color: var(--greenColorPrimary); }
+
+.bgYellowColorPrimary{ background-color: var(--yellowColorPrimary); }
+
+/*  Colores de letra  */
+.cWhiteColorPrimary{ color: var(--whiteColorPrimary); }
+
+.cBlackColorPrimary{ color: var(--blackColorPrimary); }
+
+.cBlackColorSecundary{ color: var(--blackColorSecundary); }
+
+.cRedColorPrimary{ color: var(--redColorPrimary); }
+
+.cOrangeColorPrimary{ color: var(--orangeColorPrimary); }
+
+.cGrayColorPrimary{ color: var(--grayColorPrimary); }
+
+.cDarkGrayColorSecundary{ color: var(--darkGrayColorSegundary); }
+
+.cGreenColorPrimary{ color: var(--greenColorPrimary); }
+
+.cYellowColorPrimary{ color: var(--yellowColorPrimary); }
+
+/*  Colores para activar opción menú  */
+.bgActiveColor{ background-color: var(--orangeColorPrimary); }
+
+.bbActiveColor{ border-bottom: 1px solid var(--orangeColorPrimary); }
+
+/*  Tipos de letras  */
+.letter-title{ font-family: var(--letter_title); }
+
+.letter-text{ font-family: var(--letter_text); }
+
+/*  Otros  */
+.nounder{ text-decoration: none; }
+
+.under{ text-decoration: underline; }
+
+.italic{ font-style: italic; }
+
+.cursor-pointer{ cursor: pointer; }
+
+.display_none{ display: none; }
+
+.display_block{ display: block; }
+
+.display_table{ display: table; }
+
+.display_inline{ display: inline; }
+
+.display_inline_block{ display: inline-block; }
+
+.capital_letter{ text-transform: capitalize; }
+
+.fw{ flex-wrap: wrap; }
+
+.bold { font-weight: bold; }
+
+/*  Para elementos de listas desordenadas  */
+.no_marker{ list-style-position: inside; }
+
+.no_list{ list-style: none; }
+
+/*------------------------Zona de clases generales------------------------*/
+/* Posicionamiento */
+.dflex {
+  display: flex;
+}
+
+.dFlex-jcCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.dFlex-jcCenter-aiCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dFlex-fdColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.dFlex-fdColumn-jcSpaceBet{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dFlex-fdColumn-aiCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dFlex-fdColumn-jcCenter-aiCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dFlex-jcCenter-aiCenter-fw{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*  Clase para ocultar código disponible para accesibilidad web  */
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
