@@ -36,3 +36,15 @@
     </head>
 
     <body>
+
+        <div class="main__container">
+
+            <header class="main__header">
+            
+            </header>
+
+            <main class="main">
+
+                <section class="main__section">
+                
+                
