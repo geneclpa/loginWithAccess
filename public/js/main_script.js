@@ -19,20 +19,43 @@ d.addEventListener('click', e => {
 /*  Eventos al cargar la página web  */
 d.addEventListener('DOMContentLoaded', e => {
 
+    /*  Ubicamos de la url el elemento que marca la página en la que estamos y cada uno de los links  */
+    let url_element = window.location.pathname.split('/'),
+        actual_page = url_element[2],
+        links_elements = d.querySelectorAll('.links');
+
+    /*  Recorremos cada link para ubicar la página actual y marcar el link correspondiente como activo  */
+    links_elements.forEach(el => {
+
+        if(actual_page === '' && el.innerText === 'Home'){
+
+            el.classList.remove('nounder');
+
+        }else if(actual_page === 'login' && el.innerText === 'Login'){
+
+            el.classList.remove('nounder');
+
+        }else if(actual_page === 'register' && el.innerText === 'Registro'){
+
+            el.classList.remove('nounder');
+
+        }
+
+    });
+
+    /*  Validación del formulario de login  */
     if(d.querySelector('#login-form')){
 
-        /*  Validación de formulario  */
         form_validation('#login-form');
 
     }
 
+    /*  Validación del formulario de registro  */
     if(d.querySelector('#register-form')){
 
-        /*  Validación de formulario  */
         form_validation('#register-form');
 
     }
-
 
 });
 
