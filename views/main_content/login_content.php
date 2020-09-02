@@ -16,6 +16,10 @@
 
             <input class="pa10 ma10 bgOrangeColorPrimary cWhiteColorPrimary noBorder cursor-pointer" type="submit" value="Iniciar sesión" />
 
+            <div class="loader tac ma20 display_none">
+                <img src="<?php echo PUBLIC_DIR; ?>img/oval.svg" alt="Enviando formulario..." title="Enviando formulario..." />
+            </div>
+
             <p class="messaje_login pa10 ma10 tac display_none"></p>
 
         </form>

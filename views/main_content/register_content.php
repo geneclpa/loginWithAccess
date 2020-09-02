@@ -21,6 +21,10 @@
             <input class="pa10 ml10 mt10 mr10" type="password" name="pass__two" id="pass__two" placeholder="Confirmar contraseña" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_\-\*]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 
             <input class="pa10 ma10 bgOrangeColorPrimary cWhiteColorPrimary noBorder cursor-pointer" type="submit" value="Registrarme" />
+
+            <div class="loader tac ma20 display_none">
+                <img src="<?php echo PUBLIC_DIR; ?>img/oval.svg" alt="Enviando formulario..." title="Enviando formulario..." />
+            </div>
             
             <p class="messaje_register pa10 ma10 tac display_none"></p>
 
