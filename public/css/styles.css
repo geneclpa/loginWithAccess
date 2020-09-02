@@ -20,5 +20,31 @@
 }
 
 .login__form form [type=submit]:hover, .register__form form [type=submit]:hover{
-    background-color: var(--orangeColorPrimary);
+    background-color: var(--redColorPrimary);
+}
+
+.input__error{
+    margin: 0 var(--tam_10px) var(--tam_10px) var(--tam_10px);
+    background-color: var(--redColorPrimary);
+    color: var(--whiteColorPrimary);
+    padding: var(--tam_5px);
+    font-size: .9rem;
+}
+
+.input__error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+/*  Animación de los mensajes de error  */
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
 }

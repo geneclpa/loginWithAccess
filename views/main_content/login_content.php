@@ -10,11 +10,11 @@
 
         <form id="login-form" action="" name="login-form" method="POST" class="w40" autocomplete="off">
 
-            <input class="pa10 ma10" type="text" name="user" id="user" placeholder="Usuario" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_-]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required autofocus />
+            <input class="pa10 ml10 mt10 mr10" type="text" name="user" id="user" placeholder="Usuario" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_\-]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required autofocus />
 
-            <input class="pa10 ma10" type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_-*]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
+            <input class="pa10 ml10 mt10 mr10" type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_\-\*]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 
-            <input class="pa10 ma10 bgRedColorPrimary cWhiteColorPrimary noBorder cursor-pointer" type="submit" value="Iniciar sesión" />
+            <input class="pa10 ma10 bgOrangeColorPrimary cWhiteColorPrimary noBorder cursor-pointer" type="submit" value="Iniciar sesión" />
 
         </form>
 
