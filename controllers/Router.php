@@ -17,7 +17,6 @@
 
             /*  Array con los valores permitidos en la url. Vienen de la carpeta ./views/pages, por ello el nombre de los archivos deben ser igual a la ruta amigable que se usará.  */
             $white_pages_list = read_directory(VIEWS_DIR . 'pages/');
-            $white_ajax_list = read_directory(VIEWS_DIR . 'main_content/');
 
             /*  Instancia de la clase que controla las vistas a cargar  */
             $view_page = new View_Controller();
@@ -30,14 +29,6 @@
 
                 /*  Se asigna la vista correspondiente al valor que viene en la url  */
                 $view_page->show_view($this->route);
-
-            }elseif(in_array($this->route[0], $white_ajax_list)){
-
-                /*  Se asigna a la variable el valor permitido en el array  */
-                $this->route = $this->route[0];
-
-                /*  Se asigna la vista correspondiente al valor que viene en la url  */
-                $view_page->show_html($this->route);
 
             }else{
 

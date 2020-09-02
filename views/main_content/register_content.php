@@ -10,15 +10,15 @@
 
         <form action="" name="register-form" method="POST" class="w40" autocomplete="off">
 
-            <input class="pa10 ma10" type="text" name="name" id="name" placeholder="Nombres" required />
+            <input class="pa10 ma10" type="text" name="name" id="name" placeholder="Nombres" pattern="^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$" title="El campo debe tener un formato válido. Solo letras y espacios en blanco" autofocus required />
 
-            <input class="pa10 ma10" type="email" name="email" id="email" placeholder="Correo electrónico" required />
+            <input class="pa10 ma10" type="email" name="email" id="email" placeholder="Correo electrónico" pattern="^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$" title="El campo debe tener un correo válido" required />
 
-            <input class="pa10 ma10" type="text" name="user" id="user" placeholder="Usuario" required />
+            <input class="pa10 ma10" type="text" name="user" id="user" placeholder="Usuario" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_-]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 
-            <input class="pa10 ma10" type="password" name="pass__one" id="pass__one" placeholder="Contraseña" required />
+            <input class="pa10 ma10" type="password" name="pass__one" id="pass__one" placeholder="Contraseña" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_-*]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 
-            <input class="pa10 ma10" type="password" name="pass__two" id="pass__two" placeholder="Confirmar contraseña" required />
+            <input class="pa10 ma10" type="password" name="pass__two" id="pass__two" placeholder="Confirmar contraseña" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_-*]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 
             <input class="pa10 ma10 bgRedColorPrimary cWhiteColorPrimary noBorder cursor-pointer" type="submit" value="Registrarme" />
 

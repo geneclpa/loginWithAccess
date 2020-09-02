@@ -14,11 +14,4 @@
 
         }
 
-        /*  Método para cargar las vistas dinámicas vía ajax de la página web  */
-        public function show_html($view){
-
-            require_once self::$folder_view . 'main_content/' . $view . '.php';
-
-        }
-
     }

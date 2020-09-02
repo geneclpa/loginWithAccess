@@ -10,51 +10,7 @@ d.addEventListener('click', e => {
     /*  Al hacer click en el logo se va al inicio  */
     if(e.target.matches('.logo')){
 
-       /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-        get_html({
-            url: './index_content',
-            success: (html) => $html.innerHTML = html,
-            error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
-        });
-
-    }
-
-    if(e.target.matches('.links')){
-
-        e.preventDefault();
-
-        if(e.target.textContent === 'Home'){
-
-            /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-            get_html({
-                url: e.target.href,
-                success: (html) => $html.innerHTML = html,
-                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
-            });
-
-        }
-
-        if(e.target.textContent === 'Login'){
-
-            /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-            get_html({
-                url: e.target.href,
-                success: (html) => $html.innerHTML = html,
-                error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
-            });
-
-        }
-
-        if(e.target.textContent === 'Registro'){
-
-           /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-            get_html({
-               url: e.target.href,
-               success: (html) => $html.innerHTML = html,
-               error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
-            });
-
-        }
+        Window.location.href = './';
 
     }
     
@@ -63,15 +19,8 @@ d.addEventListener('click', e => {
 /*  Eventos al cargar la página web  */
 d.addEventListener('DOMContentLoaded', e => {
 
-    /*  Se selecciona el contenedor del contenido principal  */
-    const $html = d.querySelector('.main__section');
-
-    /*  Invocación de la función que procesa peticiones AJAX para mostrar el contenido al cargar la página  */
-    get_html({
-        url: './index_content',
-        success: (html) => $html.innerHTML = html,
-        error: (err) => $html.innerHTML = `<h3>${err}</h3>`,
-    });
+    /*  Validación de formulario  */
+    form_validation('#login-form');
 
 });
 
@@ -87,7 +36,7 @@ const get_html = (options) => {
         if(xhr.readyState !== 4) return;
 
         if(xhr.status >= 200 && xhr.status < 300){
-
+            
             let html = xhr.responseText;
             success(html);
 
@@ -103,5 +52,14 @@ const get_html = (options) => {
     xhr.open('GET', url);
     xhr.setRequestHeader('Content-type', 'text/html; charset=utf-8');
     xhr.send();
+
+}
+
+/*  Función para validar los formularios  */
+const form_validation = (form) => {
+
+    const $form = d.querySelector(form)
+    console.log($form);
+
 
 }

@@ -5,6 +5,11 @@
     /*  Definición de la base url. Llamado a la función definida en el core  */
     $base_url = get_base_label();
 
+    /*  Se define la página web solicitada por la url y en caso que no esté definida se pasa el valor index(home)  */
+    $page = (isset($_GET['page'])) ? Main_Model::clean_chain(htmlspecialchars($_GET['page'])) : 'index';
+
+    $page = get_url($page);
+
 ?>
 
 <!DOCTYPE html>
