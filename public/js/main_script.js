@@ -157,4 +157,19 @@ const form_validation = (form) => {
 
     });
 
+    d.addEventListener('submit', e => {
+
+        e.preventDefault();
+        
+        if(d.querySelector('#register-form')){
+            
+            const $loader = d.querySelector('.loader'),
+                $response = d.querySelector('.messaje_register');
+
+            $loader.classList.remove('display_none');
+
+        }
+
+    });
+
 }
