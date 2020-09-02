@@ -13,6 +13,10 @@
         case 'register':
             include_once VIEWS_DIR . 'main_content/register_content.php';
             break;
+
+        case 'access':
+            include_once VIEWS_DIR . 'main_content/access_content.php';
+            break;
         
         default:
             include_once VIEWS_DIR . 'main_content/index_content.php';

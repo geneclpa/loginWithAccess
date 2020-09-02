@@ -8,11 +8,7 @@ d.addEventListener('click', e => {
     const $html = d.querySelector('.main__section');
 
     /*  Al hacer click en el logo se va al inicio  */
-    if(e.target.matches('.logo')){
-
-        Window.location.href = './';
-
-    }
+    if(e.target.matches('.logo')) window.location.href = './';
     
 });
 
@@ -44,18 +40,10 @@ d.addEventListener('DOMContentLoaded', e => {
     });
 
     /*  Validación del formulario de login  */
-    if(d.querySelector('#login-form')){
-
-        form_validation('#login-form');
-
-    }
+    if(d.querySelector('#login-form')) form_validation('#login-form');
 
     /*  Validación del formulario de registro  */
-    if(d.querySelector('#register-form')){
-
-        form_validation('#register-form');
-
-    }
+    if(d.querySelector('#register-form')) form_validation('#register-form');
 
 });
 
@@ -127,28 +115,16 @@ const form_validation = (form) => {
             }
 
             /*  Se evalua si hay caracteres en el campo  */
-            if($input.value.length === 0){
-
-                result = d.getElementById(`error-${$input.name}`).classList.remove('is-active');
-
-            }
+            if($input.value.length === 0) result = d.getElementById(`error-${$input.name}`).classList.remove('is-active');
 
             /*  Se evalua si hay un campo que no tenga el valor de requerido  */
-            if(!pattern) {
-
-                result = $input.value === '' ? d.getElementById(`error-${$input.name}`).classList.add('is-active') : d.getElementById(`error-${$input.name}`).classList.remove('is-active');
-
-            }
+            if(!pattern) result = $input.value === '' ? d.getElementById(`error-${$input.name}`).classList.add('is-active') : d.getElementById(`error-${$input.name}`).classList.remove('is-active');
             
             /*  Se evalua si los campos de contraseñas coinciden  */
             if(pattern && ($input.name === 'pass__one' || $input.name === 'pass__two')){
 
                 /*  Se almacena el valor del primer campo de contraseña  */
-                if($input.name === 'pass__one'){
-
-                    value_one = $input.value;
-
-                }
+                if($input.name === 'pass__one') value_one = $input.value;
 
                 /*  Se evalua si las contraseñas coinciden  */
                 if($input.name === 'pass__two' && $input.value.length >= 8){
