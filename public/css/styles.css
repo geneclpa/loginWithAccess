@@ -1,6 +1,5 @@
 /*  Hoja de estilos personalizada  */
-
-.login__page, .register__page{
+.login__page, .register__page, .access__page, .access__table table{
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,13 +14,9 @@
     flex-direction: column;
 }
 
-.login__form form [type="submit"], .register__form form [type=submit]{
-    border-radius: var(--tam_5px);
-}
+.login__form form [type="submit"], .register__form form [type=submit] { border-radius: var(--tam_5px); }
 
-.login__form form [type=submit]:hover, .register__form form [type=submit]:hover{
-    background-color: var(--redColorPrimary);
-}
+.login__form form [type=submit]:hover, .register__form form [type=submit]:hover{ background-color: var(--redColorPrimary); }
 
 .input__error{
     margin: 0 var(--tam_10px) var(--tam_10px) var(--tam_10px);

@@ -35,6 +35,10 @@ d.addEventListener('DOMContentLoaded', e => {
 
             el.classList.remove('nounder');
 
+        }else if(actual_page === 'access' && el.innerHTML === 'Salir'){
+
+            el.classList.remove('nounder');
+
         }
 
     });
