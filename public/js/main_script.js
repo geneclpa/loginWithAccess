@@ -147,12 +147,13 @@ const form_validation = (form) => {
             $response.innerHTML = json.message;
 
             setTimeout(() => {
+
                 window.location.href = json.url_res;
+
             }, 3000);
 
         })
         .catch(err => {
-            console.log(err);
             let err_message = err.statusText || 'Ocurrió un error inesperado';
             $response.innerHTML = `Error: ${err.status} - ${err_message}`;
         });
