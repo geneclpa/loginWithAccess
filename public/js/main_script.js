@@ -52,7 +52,8 @@ const form_validation = (form) => {
 
     /*  Ubicamos el formulario y los campos requeridos  */
     const $form = d.querySelector(form),
-        $inputs = d.querySelectorAll(`${form} [required]`);
+        $inputs = d.querySelectorAll(`${form} [required]`),
+        form_action = $form.getAttribute('action');
 
     /*  Creamos de manera dinámica los párrafos donde se mostrarán los errores en caso de que hayan para cada campo  */
     $inputs.forEach(input => {
@@ -129,36 +130,32 @@ const form_validation = (form) => {
     d.addEventListener('submit', e => {
 
         e.preventDefault();
-        
-        if(d.querySelector('#register-form')){
             
-            const $loader = d.querySelector('.loader'),
-                $response = d.querySelector('.messaje_register');
+        const $loader = d.querySelector('.loader'),
+            $response = d.querySelector('.messaje_form');
 
-            $loader.classList.remove('display_none');
+        $loader.classList.remove('display_none');
 
-            fetch('./form_register', {
-                method: 'POST',
-                body: new FormData(e.target)
-            })
-            .then(res => res.ok ? res.json() : Promise.reject(res))   
-            .then(json => {
-                $loader.classList.add('display_none');
-                $response.classList.remove('display_none');
-                $response.innerHTML = json.message;
+        fetch(form_action, {
+            method: 'POST',
+            body: new FormData(e.target)
+        })
+        .then(res => res.ok ? res.json() : Promise.reject(res))   
+        .then(json => {
+            $loader.classList.add('display_none');
+            $response.classList.remove('display_none');
+            $response.innerHTML = json.message;
 
-                setTimeout(() => {
-                    window.location.href = json.url_res;
-                }, 5000);
+            setTimeout(() => {
+                window.location.href = json.url_res;
+            }, 5000);
 
-            })
-            .catch(err => {
-                console.log(err);
-                let err_message = err.statusText || 'Ocurrió un error inesperado';
-                $response.innerHTML = `Error: ${err.status} - ${err_message}`;
-            });
-
-        }
+        })
+        .catch(err => {
+            console.log(err);
+            let err_message = err.statusText || 'Ocurrió un error inesperado';
+            $response.innerHTML = `Error: ${err.status} - ${err_message}`;
+        });
 
     });
 

@@ -8,7 +8,7 @@
 
     <div class="register__form">
 
-        <form id="register-form" action="" name="register-form" method="POST" class="w40" autocomplete="off">
+        <form id="register-form" action="./form_register" name="register-form" method="POST" class="w40" autocomplete="off">
 
             <input class="pa10 ml10 mt10 mr10 capital_letter" type="text" name="name" id="name" placeholder="Nombres" pattern="^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$" title="El campo debe tener un formato válido. Solo letras y espacios en blanco" autofocus required />
 
@@ -26,7 +26,7 @@
                 <img src="<?php echo PUBLIC_DIR; ?>img/oval.svg" alt="Enviando formulario..." title="Enviando formulario..." />
             </div>
             
-            <p class="messaje_register pa10 ma10 tac display_none"></p>
+            <p class="messaje_form pa10 ma10 tac display_none"></p>
 
         </form>
 
