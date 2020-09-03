@@ -148,7 +148,7 @@ const form_validation = (form) => {
 
             setTimeout(() => {
                 window.location.href = json.url_res;
-            }, 5000);
+            }, 3000);
 
         })
         .catch(err => {

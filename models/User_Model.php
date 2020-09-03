@@ -28,7 +28,32 @@
 
             }
 
-            $this->query = "SELECT * FROM user_db WHERE user_user = '$user' && email_user = '$email';";
+            $this->query = "SELECT * FROM user_db WHERE user_user = '$user' AND email_user = '$email';";
+
+            $this->get_query();
+
+            $data_info = array();
+
+            foreach($this->rows as $key => $value){
+
+                array_push($data_info, $value);
+
+            }
+
+            return $data_info;
+            
+        }
+
+        /*  Método para validar el acceso de los usuarios a la zona de usuarios  */
+        public function validate_login($user_data = array()){
+
+            foreach($user_data as $key => $value){
+
+                $$key = Main_Model::clean_chain($value);
+
+            }
+
+            $this->query = "SELECT * FROM user_db WHERE user_user = '$user' AND pass_user = '$pass';";
 
             $this->get_query();
 

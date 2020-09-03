@@ -27,4 +27,11 @@
             
         }
 
+        /*  Método para validar el acceso de los usuarios a la zona de usuarios  */
+        public function validate_login($user_data = array()){
+
+            return $this->user_info->validate_login($user_data);
+            
+        }
+
     }
