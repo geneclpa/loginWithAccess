@@ -12,7 +12,7 @@
 
             <input class="pa10 ml10 mt10 mr10 capital_letter" type="text" name="name" id="name" placeholder="Nombres" pattern="^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$" title="El campo debe tener un formato válido. Solo letras y espacios en blanco" autofocus required />
 
-            <input class="pa10 ml10 mt10 mr10" type="email" name="email" id="email" placeholder="Correo electrónico" pattern="^[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}$" title="El campo debe tener un correo válido" required />
+            <input class="pa10 ml10 mt10 mr10" type="email" name="email" id="email" placeholder="Correo electrónico" pattern="^[\w\-\.]{3,}@([\w\-]{2,}\.)*([\w\-]{2,}\.)[\w\-]{2,4}$" title="El campo debe tener un correo válido" required />
 
             <input class="pa10 ml10 mt10 mr10" type="text" name="user" id="user" placeholder="Usuario" maxlength="20" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ_\-]{8,20}$" title="El campo debe tener un formato válido, mínimo 8 y máximo 20 caracteres" required />
 

@@ -20,4 +20,11 @@
 
         }
 
+        /*  Método para obtener información de los usuarios de la base de datos  */
+        public function get($user_data = array()){
+
+            return $this->user_info->get($user_data);
+            
+        }
+
     }

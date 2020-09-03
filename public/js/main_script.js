@@ -47,37 +47,6 @@ d.addEventListener('DOMContentLoaded', e => {
 
 });
 
-/*  Función para procesar solicitudes ajax  */
-const get_html = (options) => {
-
-    let {url, success, error} = options;
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.addEventListener('readystatechange', e => {
-
-        if(xhr.readyState !== 4) return;
-
-        if(xhr.status >= 200 && xhr.status < 300){
-            
-            let html = xhr.responseText;
-            success(html);
-
-        }else{
-
-            let message = xhr.statusText || 'Ocurrio un error';
-            error(`Error ${xhr.status}: ${message}`);
-
-        }
-
-    });
-
-    xhr.open('GET', url);
-    xhr.setRequestHeader('Content-type', 'text/html; charset=utf-8');
-    xhr.send();
-
-}
-
 /*  Función para validar los formularios  */
 const form_validation = (form) => {
 
@@ -167,6 +136,27 @@ const form_validation = (form) => {
                 $response = d.querySelector('.messaje_register');
 
             $loader.classList.remove('display_none');
+
+            fetch('./form_register', {
+                method: 'POST',
+                body: new FormData(e.target)
+            })
+            .then(res => res.ok ? res.json() : Promise.reject(res))   
+            .then(json => {
+                $loader.classList.add('display_none');
+                $response.classList.remove('display_none');
+                $response.innerHTML = json.message;
+
+                setTimeout(() => {
+                    window.location.href = json.url_res;
+                }, 5000);
+
+            })
+            .catch(err => {
+                console.log(err);
+                let err_message = err.statusText || 'Ocurrió un error inesperado';
+                $response.innerHTML = `Error: ${err.status} - ${err_message}`;
+            });
 
         }
 

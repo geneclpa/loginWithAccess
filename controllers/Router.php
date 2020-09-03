@@ -31,7 +31,7 @@
 
                 /*  Si la ruta no esta en el array de valores permitidos se asigna index por defecto  */
                 $this->route = 'index';
-    
+
             }
 
             /*  Opciones de la sesión  */
